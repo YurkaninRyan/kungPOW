@@ -1,3 +1,8 @@
+@font-face {
+	font-family: oriental;
+	src: url('');
+}
+
 * {
 	margin: 0;
 }
@@ -33,7 +38,16 @@ sub-title {
 
 .logoBar > p {
 	color: white;
+	float: left;
+}
 
+.logoBar > img {
+	height: 45px;
+	filter: invert();
+	-webkit-filter: invert();
+	float: left;
+	margin-top: 4px;
+	margin-left: 10px;
 }
 
 .battleStage {
