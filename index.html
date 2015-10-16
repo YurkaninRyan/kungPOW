@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" ng-app="kungPowApp" ng-controller="AppController">
 	<head>
 		<title>Kung Pow</title>
@@ -18,6 +17,16 @@
 	</head>
 	<body>
 		<div class="appWrapper" ng-view></div>
+
+				<!-- Socket IO Shizz -->
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+		  var socket = io.connect('http://localhost:3000');
+		  socket.on('news', function (data) {
+		    console.log(data);
+		    socket.emit('my other event', { my: 'data' });
+		  });
+		</script>
 	</body>
 </html>
 
