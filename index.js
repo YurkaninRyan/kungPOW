@@ -1,5 +1,4 @@
-var client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN),
-    app = require('express')(),
+var app = require('express')(),
     http = require('http').Server(app),
     io = require('socket.io')(http),
     pf = require('port-friends'),
