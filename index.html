@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="kungPowApp">
+<html lang="en" ng-app="kungPowApp" ng-controller="AppController">
 	<head>
 		<title>Kung Pow</title>
 		<meta charset="utf-8" />
-	</head>
-	<body>
-        HELLO WORLD
 
-
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="main.css" />
 
 		<!-- Angular -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 
 		<!-- Angular Route -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
 
-		<!-- Socket IO Shizz -->
+		<!-- Custom Script -->
+		<script src="AppModule.js"></script>
+	</head>
+	<body>
+		<div class="appWrapper" ng-view></div>
+
+				<!-- Socket IO Shizz -->
 		<script src="/socket.io/socket.io.js"></script>
 		<script>
 		  var socket = io.connect('http://localhost:3000');
