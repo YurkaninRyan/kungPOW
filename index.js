@@ -1,13 +1,14 @@
 var client = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN),
     app = require('express')(),
     http = require('http').Server(app),
-    io = require('socket.io')(http)
-    port = process.env.PORT || 3000;
+    io = require('socket.io')(http),
+    pf = require('port-friends'),
+    PORT = process.env.PORT || 3000;
+
+app.set('port', PORT)
 
 app.get('/', function(req, res){
-  res.sendfile('index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
-http.listen(port, function(){
-  console.log('listening on ' + port);
-});
+pf.listen(app);
