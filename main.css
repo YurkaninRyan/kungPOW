@@ -1,8 +1,14 @@
+* {
+	margin: 0;
+}
+
 html, body {
     min-width: 100%;
     width: 100%;
     overflow: hidden;
     background-color: #eee;
+    margin: 0px;
+    padding: 0px;
 }
 
 title {
@@ -11,4 +17,31 @@ title {
 
 sub-title {
     font-size: 1rem;
+}
+
+.appWrapper {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.logoBar {
+	width: 100%;
+	height: 55px;
+	background-color: #e74c3c;
+}
+
+.logoBar > p {
+	color: white;
+
+}
+
+.battleStage {
+	height: calc(100% - 55px);
+	width: 60%;
+}
+
+.chatWrapper {
+	height: calc(100% - 55px);
+	width: 40%;
 }

@@ -13,5 +13,5 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.controller('AppController', function($scope) {
-	$scope.test = "Hello World";
+	
 });
