@@ -24,6 +24,7 @@
 		<script src="AppModule.js"></script>
 	</head>
 	<body>
+		<!-- View -->
 		<div class="appWrapper" ng-view></div>
 
 		<!-- Socket IO Shizz -->
@@ -35,5 +36,11 @@
 		    socket.emit('my other event', { my: 'data' });
 		  });
 		</script>
+
+		<!-- jQuery; dependency for Notify.js -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+		<!-- Notify.js -->
+		<script src="libs/notify.min.js"></script>
 	</body>
 </html>
