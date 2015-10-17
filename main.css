@@ -108,9 +108,11 @@ sub-title {
 
 .posts {
 	width: 100%;
-	height: 80%;
+	height: 84.5%;
 	border-bottom: 3px dashed #464646;
 	padding: 25px;
+	transition: height 0.5s ease;
+	-webkit-transition: height 0.5s ease;
 }
 
 .postBox {
@@ -121,7 +123,7 @@ sub-title {
 
 .inputs {
 	width: 100%;
-	height: calc(20% - 3px);
+	height: calc(22% - 3px);
 }
 
 .chatInput {

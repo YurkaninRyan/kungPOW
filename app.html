@@ -19,12 +19,16 @@
 	</div>
 	<!-- Chat controls (send/options button, Twitch emojis, etc.) -->
 	<div class="inputs">
-		<input ng-model="inputMessage" type="text" class="chatInput" />
+		<input ng-model="inputMessage" type="text" class="chatInput" placeholder="{{inputPlaceholder}}"/>
 		<div class="sendButton inputButton" ng-click="addPost()">
 			<img alt="Send" src="send.svg" />
 		</div>
-		<div class="optionsButton inputButton">
+		<div class="optionsButton inputButton" ng-click="toggleOptions()">
 			<img alt="Options" src="options.png" />
+		</div>
+		<input ng-model="inputUsername" type="text" class="usernameInput" />
+		<div class="avatarButton inputButton" ng-click="changeAvatar()">
+			<img alt="Change Avatar" src="avatar.svg" />
 		</div>
 	</div>
 </div>	
