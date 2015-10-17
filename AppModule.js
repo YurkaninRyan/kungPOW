@@ -78,6 +78,20 @@ function getCorrectedHour(i){
     return (h == 0) ? 12 : h;
 }
 
+function getPlaceholder(){
+    var rand = Math.floor(Math.random()*10);
+    return placeholders[rand];
+}
+
 var placeholders = [
-	"Example 1"
+	"Say something interesting.",
+	"Don't just sit there, say something!",
+	"hahaha isn't this great?",
+	"your mom",
+	"Say something funny.",
+	"Nice weather today, isn't it?",
+	"I had fun once, it was awful.",
+	"Any opinions?",
+	"Make a new virtual friend",
+	"Cat got your tongue?" 
 ]
