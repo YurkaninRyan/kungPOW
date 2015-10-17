@@ -36,8 +36,7 @@ app.controller('AppController', function($scope) {
 		//add the post
 		postData.content = $scope.inputMessage;
 		var now = new Date();
-		postData.date = (now.getMonth() + 1) + "/" + now.getDate() + "/" + now.getFullYear() + " - " + 
-						(now.getHours() % 12) + ":" + addZero(now.getMinutes());
+		postData.date = (now.getMonth() + 1) + "/" + now.getDate() + "/" + now.getFullYear() + " - " + getCorrectedHour(now.getHours()) + ":" + addZero(now.getMinutes()) + getAMPM(now.getHours());
 		$scope.inputMessage = "";
 		$scope.postList.push(postData);
 	}	
@@ -55,4 +54,13 @@ function addZero(i) {
         i = "0" + i;
     }
     return i;
+}
+
+function getAMPM(i){
+    return (i < 13) ? "AM" : "PM";
+}
+
+function getCorrectedHour(i){
+    var h = i % 12;
+    return (h == 0) ? 12 : h;
 }
