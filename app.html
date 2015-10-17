@@ -13,12 +13,14 @@
 <div class="chatWrapper">
 	<!-- Chat posts -->
 	<div class="posts">
-
+		<div class="postBox" scroll-glue="glued">
+			<chat-box ng-repeat="post in postList track by $index"></chat-box>
+		</div>
 	</div>
 	<!-- Chat controls (send/options button, Twitch emojis, etc.) -->
 	<div class="inputs">
-		<input type="text" class="chatInput" />
-		<div class="sendButton inputButton">
+		<input ng-model="inputMessage" type="text" class="chatInput" />
+		<div class="sendButton inputButton" ng-click="addPost()">
 			<img alt="Send" src="send.svg" />
 		</div>
 		<div class="optionsButton inputButton">

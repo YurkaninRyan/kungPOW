@@ -1,0 +1,15 @@
+<div class="postContainer" ng-class="getClass(post)">
+	<img class="avatar" ng-class="getClass(post)" ng-src="/svg_avatars/{{post.avatar}}" />
+	<div class="postContentContainer" ng-class="getClass(post)">
+		<div class="postNameArea" ng-class="getClass(post)">
+			<!-- Other Users -->
+			<p ng-if="!post.self" class="postDate" ng-class="getClass(post)" style="margin-left: 5px;">- {{post.date}}</p>
+			<p class="postName" ng-class="getClass(post)">{{post.username}}</p>
+			<!-- Self User -->
+			<p ng-if="post.self" class="postDate" ng-class="getClass(post)" style="margin-right: 5px;">{{post.date}} - </p>
+		</div>
+		<div class="postContentArea">
+			<p class="postContent">{{post.content}}</p> 
+		</div>
+	</div>
+</div>

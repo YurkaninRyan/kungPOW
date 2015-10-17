@@ -10,6 +10,29 @@
 	margin: 0;
 }
 
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e74c3c; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
 html, body {
     min-width: 100%;
     width: 100%;
@@ -87,6 +110,13 @@ sub-title {
 	width: 100%;
 	height: 80%;
 	border-bottom: 3px dashed #464646;
+	padding: 25px;
+}
+
+.postBox {
+	width: 93%;
+    height: 98%;
+    overflow-y: scroll;
 }
 
 .inputs {
