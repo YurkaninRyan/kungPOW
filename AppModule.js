@@ -13,6 +13,9 @@ app.config(['$routeProvider', function($routeProvider) {
 }]);
 
 app.controller('AppController', function($scope) {
+	$scope.$on('$viewContentLoaded', function() {
+    	document.getElementsByClassName('chatInput')[0].focus();
+	});
 	$scope.postList = []; $scope.optionsOpened = false;
 	$scope.glued = true;
 	$scope.inputPlaceholder = getPlaceholder();
@@ -50,6 +53,7 @@ app.controller('AppController', function($scope) {
 					"autoHideDelay": 3000,
 					"elementPosition": "left"
 				});
+				document.getElementsByClassName('usernameInput')[0].focus();
 				return;
 			}, timeOut);
 		} else {
@@ -98,10 +102,20 @@ function getCorrectedHour(i){
     return (h == 0) ? 12 : h;
 }
 
-function getPlaceholder() {
-
+function getPlaceholder(){
+    var rand = Math.floor(Math.random()*10);
+    return placeholders[rand];
 }
 
 var placeholders = [
-	"Example 1"
-]
+	"Say something interesting.",
+	"Don't just sit there, say something!",
+	"Hahaha isn't this great?",
+	"Your mom.",
+	"Say something funny.",
+	"Nice weather today, isn't it?",
+	"I had fun once, it was awful.",
+	"Show the world how funny (you think) you are!",
+	"Make a new virtual friend",
+	"Cat got your tongue?" 
+];
