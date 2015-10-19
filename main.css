@@ -108,7 +108,7 @@ sub-title {
 
 .posts {
 	width: 100%;
-	height: 84.5%;
+	height: calc(100% - 118px);
 	border-bottom: 3px dashed #464646;
 	padding: 25px;
 	transition: height 0.5s ease;

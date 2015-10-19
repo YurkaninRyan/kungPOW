@@ -29,10 +29,10 @@ app.controller('AppController', function($scope) {
 		var chatBox = document.getElementsByClassName('posts')[0];
 		if($scope.optionsOpened) {
 			//close options window
-			chatBox.style.height = "85%";
+			chatBox.style.height = "calc(100% - 118px)";
 		} else {
 			//open options window 
-			chatBox.style.height = "77%";
+			chatBox.style.height = "calc(100% - 180px)";
 		}
 		$scope.optionsOpened = !$scope.optionsOpened;
 	}
