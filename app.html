@@ -19,7 +19,7 @@
 	</div>
 	<!-- Chat controls (send/options button, Twitch emojis, etc.) -->
 	<div class="inputs">
-		<input ng-model="inputMessage" type="text" class="chatInput" placeholder="{{inputPlaceholder}}"/>
+		<input ng-model="inputMessage" type="text" class="chatInput" placeholder="{{inputPlaceholder}}" ng-keydown="$event.which === 13 && addPost()"/>
 		<div class="sendButton inputButton" ng-click="addPost()">
 			<img alt="Send" src="send.svg" />
 		</div>
